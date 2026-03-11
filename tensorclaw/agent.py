@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 from .shell import run_command
 from .templates import render_template, shell_escape
@@ -36,6 +36,9 @@ def run_agent_iteration(
     phase: str = "apply",
     save_instruction: bool = True,
     stream_output: bool = False,
+    raw_stream_output: bool = True,
+    on_stdout_line: Callable[[str], None] | None = None,
+    on_stderr_line: Callable[[str], None] | None = None,
 ) -> AgentRunResult:
     if not agent_enabled:
         return AgentRunResult(
@@ -75,6 +78,9 @@ def run_agent_iteration(
         timeout_seconds=timeout_seconds,
         log_path=log_path,
         stream_output=stream_output,
+        raw_stream_output=raw_stream_output,
+        on_stdout_line=on_stdout_line,
+        on_stderr_line=on_stderr_line,
     )
 
     success = (result.returncode == 0) and (not result.timed_out)

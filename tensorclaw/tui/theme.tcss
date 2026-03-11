@@ -1,0 +1,95 @@
+Screen {
+  background: #0b0f16;
+  color: #d9dde5;
+}
+
+#header {
+  height: 1;
+  padding: 0 1;
+  background: #121824;
+  color: #f0bf56;
+  text-style: bold;
+}
+
+#top-row {
+  height: 2fr;
+  min-height: 16;
+}
+
+#chat-pane {
+  width: 2fr;
+  border: round #4f5a69;
+  background: #0d121a;
+  padding: 0 1;
+  margin: 0 1 0 1;
+}
+
+#right-pane {
+  width: 1fr;
+  margin-right: 1;
+}
+
+#metrics-pane {
+  border: round #4f5a69;
+  background: #0d121a;
+  color: #d9dde5;
+  padding: 0 1;
+  height: 1fr;
+  margin-bottom: 1;
+}
+
+#iterations-pane {
+  border: round #4f5a69;
+  background: #0d121a;
+  color: #d9dde5;
+  padding: 0 1;
+  height: 1fr;
+}
+
+#output-pane {
+  height: 1fr;
+  border: round #4f5a69;
+  background: #11161f;
+  margin: 1;
+  padding: 0 1;
+}
+
+#input {
+  dock: bottom;
+  margin: 0 1;
+  border: round #4f5a69;
+  background: #0f141d;
+  color: #eceff5;
+}
+
+#status-bar {
+  dock: bottom;
+  height: 1;
+  padding: 0 1;
+  background: #121824;
+  color: #a9b0bd;
+}
+
+.message-bubble {
+  margin-bottom: 1;
+}
+
+.role-user {
+  color: #78d7ff;
+}
+
+.role-assistant {
+  color: #f0f2f5;
+}
+
+.role-system {
+  color: #f0bf56;
+}
+
+.proposal-card {
+  border: heavy #f0bf56;
+  background: #121a24;
+  padding: 0 1;
+  margin: 0 0 1 0;
+  color: #efe8d5;
+}

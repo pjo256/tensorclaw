@@ -9,7 +9,8 @@ authors = [
   { name = "Philip Ottesen" }
 ]
 dependencies = [
-  "PyYAML>=6.0.1"
+  "PyYAML>=6.0.1",
+  "textual>=0.66.0"
 ]
 
 [project.scripts]
@@ -19,5 +20,8 @@ tensorclaw = "tensorclaw.cli:main"
 requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools]
-packages = ["tensorclaw"]
+[tool.setuptools.packages.find]
+include = ["tensorclaw*"]
+
+[tool.setuptools.package-data]
+tensorclaw = ["tui/*.tcss"]
