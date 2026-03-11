@@ -79,12 +79,14 @@ def run_command(
             if pipe is None:
                 return
             for line in iter(pipe.readline, ""):
+                if line == "":
+                    break
                 parts.append(line)
-                if callback is not None:
-                    callback(line)
                 if raw_stream_output:
                     sink.write(line)
                     sink.flush()
+                if callback is not None:
+                    callback(line.rstrip("\r\n"))
             pipe.close()
 
         stdout_thread = threading.Thread(
