@@ -1,6 +1,6 @@
 # TensorClaw
 
-🦞🧪 TensorClaw is an agent-first ML research harness on top of [`pi`](https://github.com/badlogic/pi-mono), inspired by [autoresearch](https://github.com/karpathy/autoresearch).
+🦞🧪 TensorClaw is an ML research harness on top of [`pi`](https://github.com/badlogic/pi-mono), inspired by [autoresearch](https://github.com/karpathy/autoresearch).
 
 ![TensorClaw screenshot](./media/tensorclaw-screenshot.png)
 
